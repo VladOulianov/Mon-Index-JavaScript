@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="EventStyle.css">
+    <title>Les Base de JS</title>
+</head>
+<body>
+    <H1>OUVRE LA CONSOLE</H1>
+    <a href="/LesBases.html"> <= Retour aux dossiers</a>
+
+
+        <div id="cible"></div>
+        <div id="resultat"></div>
+    <p>
+        ///// LES EVENMENTS ///// <br>
+        <br>
+        var cible;<br>
+        var resultat;<br>
+        <br>
+        cible = document.getElementById("cible");<br>
+        resultat = document.getElementById("resultat");<br>
+        <br>
+        cible.onclick = function () {<br>
+          resultat.innerHTML = "Click event!";<br>
+        };<br>
+        cible.onmouseout = function () {<br>
+          resultat.innerHTML = "Mouse Out!";<br>
+        };<br>
+        cible.addEventListener("mouseover", function (e) {<br>
+          resultat.innerHTML = "Mouse Over event!";<br>
+          console.log(e);<br>
+        });<br>
+        <br>
+
+
+        
+    </p>
+    <script src="LesEvenements.js"></script>
+</body>
+</html>

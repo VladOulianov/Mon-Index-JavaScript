@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Base de JS</title>
+</head>
+<body>
+    <H1>OUVRE LA CONSOLE</H1>
+    <a href="/LesBases.html"> <= Retour aux dossiers</a>
+    <p>
+        ///// LES OBJECTS ///// <br>
+        <br>
+        ///Structure – propriétés, méthodes<br>
+        <br>
+        var personne ={<br>
+           nom:"DUPONT", // propriété<br>
+           prénom:"Roger", // propriété<br>
+           direBonjour:function(){<br>
+           console.log("Bonjour"); // méthode<br>
+           }<br>
+        }<br>
+        //Notations – par points – en crochets<br>
+        const person = {nom: 'Bob'};<br>
+        <br>
+        // Notation par points<br>
+        const y = person.nom;<br>
+        <br>
+        // Notation en crochets<br>
+        const x = person["nom"];<br>
+        <br>
+           ---------------------<br>
+           |Proprété  |  Valeur|<br>
+           ---------------------<br>
+           |nom       |  DUPONT|<br>
+           |prénom    |  Roger |<br>
+           ---------------------<br>
+        <br>
+        <br>
+        /// Les propriétés<br>
+        <br>
+        // Mise à jour d’une propriété<br>
+        <br>
+        var personne ={<br>
+           nom:"DUPONT", // propriété<br>
+           prénom:"Roger", // propriété<br>
+           age: 35,<br>
+           direBonjour:function(){<br>
+           console.log("Bonjour"); // méthode<br>
+           }<br>
+        };<br>
+        personne.age = 36;<br>
+        //Ajouter une propriété<br>
+         //             personne.adresse :"Paris";<br>
+        //Supprimer une propriété<br>
+                        delete personne.adresse;<br>
+                        <br>
+        /// Les méthodes<br>
+        <br>
+        var personne ={<br>
+           nom:"DUPONT",<br>
+           prénom:"Roger",<br>
+           direBonjour:function(){<br>
+           console.log("Bonjour"); // Bonjour<br>
+           }<br>
+        };<br>
+        personne.direBonjour();<br>
+        <br>
+        <br>
+        /// Création différée d'un objet<br>
+        <br>
+        var personne ={};<br>
+        personne.nom="DUPONT";<br>
+        personne.prenom="Roger";<br>
+        personne.direBonjour=function(){<br>
+            console.log("Bonjour"); // Bonjour<br>
+        };<br>
+        <br>
+        <br>
+        /// La valeur this<br>
+        <br>
+        var personne ={<br>
+           nom:"DUPONT",<br>
+           prénom:"Roger",<br>
+           afficheNom:function(){<br>
+               console.log("nom : " + this.nom); // DUPONT<br>
+           }<br>
+        };<br>
+        //On affiche la propriété "nom" de l'objet courant<br>
+        <br>
+        <br>
+        /// Le constructeur<br>
+        <br>
+        //On utilise une fonction pour créer un objet<br>
+        <br>
+        function Personne(){<br>
+           this.nom ="DUPONT";<br>
+           this.prenom ="Roger";<br>
+        }<br>
+        var personne = new Personne();<br>
+        <br>
+        console.log(personne.nom);<br>
+        <br>
+        //On utilise une fonction et on passe des paramètres pour créer un objet.<br>
+        <br>
+        function Personne(p_nom,p_prenom){<br>
+           this.nom = p_nom;<br>
+           this.prenom = p_prenom;<br>
+        }<br>
+        var nom_personne ="DUPONT";<br>
+        var prenom_personne ="Roger";<br>
+        var personne = new Personne(nom_personne,prenom_personne);<br>
+            console.log(personne.nom); // DUPONT <br>
+            <br>
+        /// L'objet Object<br>
+        <br>
+        // Object est l'objet de base implémenté par l'ensemble des objets Javascript. Tous les objets Javascript héritent de Object.<br>
+        <br>
+        var obj={};<br>
+        var obj= new Object();<br>
+        <br>
+        
+    </p>
+    
+    <script src="LesObjects.js"></script>
+</body>
+</html>

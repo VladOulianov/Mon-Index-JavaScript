@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Base de JS</title>
+</head>
+<body>
+    <H1>OUVRE LA CONSOLE</H1>
+    <a href="/LesBases.html"> <= Retour aux dossiers</a>
+    <p>
+       
+ //// Les Tableaux <br>
+ <br>
+ /// Déclarer un tableau<br>
+ <br>
+ // type 1 Régulier<br>
+/*<br>
+monTableauRegulier[0] = "un";<br>
+monTableauRegulier[1] = "deux";<br>
+monTableauRegulier[2] = "trois";<br>
+*/<br>
+// type 2 Condensé<br>
+var monTableauCondense = new Array("un","deux","trois");<br>
+var chiffre = monTableauCondense[0];<br>
+document.write("tableau type Condensé : ",chiffre); // un<br>
+<br>
+// type 3 Littéral<br>
+var monTableauLitteral = [1,2,3];<br>
+<br>
+/// Un tableau peut contenir des nombres, des chaines de caractères, des fonctions <br>
+console.log("TABLEAU :");<br>
+var a = ["Pierre", "Paul", "Jacques", "Michel",<br>
+function(){<br>
+    alert("Hello");<br>
+}];<br>
+
+/// Remplir un tableau<br>
+monTableau[1] = "deux"; // Ajoute ou modifie l'élément 1 s'il existait <br>
+<br>
+/// Lire un tableau<br>
+// avec for <br>
+console.log("LIRE MON TABLEAU :");<br>
+for(var i=0; i < a.length; i++ ){<br>
+    console.log(a[i]);   <br>
+ }<br>
+ <br>
+// ou <br>
+console.log("LIRE MON TABLEAU :");<br>
+for(i in a){<br>
+    console.log(a[i]);<br>
+}<br>
+<br>
+// Les Propriétés des Tableau<br>
+var a = ["Pierre", "Paul", "Jacques", "Michel",function(){alert("Hello");}];<br>
+a[a.length]= "Julie"; // ajouter un élément à la fin du tableau<br>
+a.push("Angie"); // ajouter un élément à la fin du tableau<br>
+a.splice(3,2); // supprimer les éléments d'index 3 et 4<br>
+a.pop(); // supprimer le dernier élément du tableau<br>
+const removedLastElement = a.pop(); // supprimer et mémoriser le dernier élément<br>
+a.unshift("Julie"); // ajouter un élément au début du tableau<br>
+a.shift(); // supprimer le premier élément<br>
+const removedFirstElement = a.shift(); // // supprimer et mémoriser le premier élément<br>
+    </p>
+    <script src="LesTableaux.js"></script>
+</body>
+</html>

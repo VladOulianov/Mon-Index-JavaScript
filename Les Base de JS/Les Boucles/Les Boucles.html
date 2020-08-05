@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Base de JS</title>
+</head>
+<body>
+    <H1>OUVRE LA CONSOLE</H1>
+    <a href="/LesBases.html"> <= Retour aux dossiers</a>
+    <p>
+        
+//// Les Boucles sever a lister des elements ou des resultas <br>
+/// la boucle for<br>
+console.log("for");<br>
+for (let i = 1; i < 4; i++) {<br>
+    console.log(i)	<br>
+ }<br>
+ /// la boucle for dans un tableau<br>
+ console.log("boucle for tableau :");<br>
+ const monTableau = ["un","deux","trois"];<br>
+ // on utilise la propriété length On utilise la proproété length pour fixer l’indice de boucle final.<br>
+ for (let i = 0; i < monTableau.length; i++) {<br>
+    console.log(monTableau[i]);	<br>
+ }<br>
+ <br>
+ <br>
+ /// La méthode forEach() permet d’exécuter une fonction donnée sur chaque élément d’un tableau.<br>
+console.log("forEach :");<br>
+ var array1 = ['a', 'b', 'c'];<br>
+ <br>
+ array1.forEach(function(element) {<br>
+<br>
+   console.log(element);<br>
+ });<br>
+ <br>
+    </p>
+    <script src="LesBoucles.js"></script>
+</body>
+</html>

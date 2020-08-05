@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Base de JS</title>
+</head>
+<body>
+    <H1>OUVRE LA CONSOLE</H1>
+    <a href="/LesBases.html"> <= Retour aux dossiers</a>
+    <p>
+        ///// Les Fonctions ///// <br>
+        <br>
+        //// Les types de fonctions<br>
+        <br>
+        /// Les Fonctions Type Nommées <br>
+        function message(){<br>
+            alert('Hello');<br>
+        }<br>
+        //On l’appelle en ajoutant des parenthèses<br>
+        message();<br>
+        <br>
+        <br>
+        /// Les Fonctions Type annonymes<br>
+        //function(){ alert('Hello');}<br>
+        <br>
+        //Une fonction anonyme peut être attribuée à une variable<br>
+        const maFonction = function(a,b){<br>
+            return a+b;<br>
+           }<br>
+           maFonction(5,3); //8<br>
+           <br>
+           //Une fonction anonyme peut être utilisée comme argument dans une fonction<br>
+           setTimeout(function(){<br>
+           console.log("Message effacé");<br>
+           },1000);<br>
+           <br>
+           <br>
+        /// Les Fonctions Type Immédiates<br>
+        (function(){ alert('Hello');})(); // la fonction est auto appelante<br>
+        (function(arg){ alert('Hello ' + arg);})("World");  //avec des arguments<br>
+        <br>
+        <br>
+        <br>
+        <br>
+        //// Les Fonctions Vriadiques<br>
+        //Une fonction variadique est une fonction qui accepte un nombre variable d’arguments.<br>
+        <br>
+        //Javascript met à disposition un pseudo-tableau ” arguments”.(On ne peut pas faire une boucle For pour le balayer)<br>
+        function moyenne(){<br>
+            let somme = 0;<br>
+            for (let i=0; i < arguments.length; i++) {<br>
+                somme += arguments[i];<br>
+            }<br>
+            let result = (somme / arguments.length) || 0;<br>
+            console.log(result);<br>
+        }<br>
+        moyenne(12, 8, 13); // expecté 11<br>
+        moyenne(); // expecté 0<br>
+        <br>
+    </p>
+    <script src="LesFonctions.js"></script>
+</body>
+</html>

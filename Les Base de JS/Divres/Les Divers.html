@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Base de JS</title>
+</head>
+<body>
+    <H1>OUVRE LA CONSOLE</H1>
+    <a href="/LesBases.html"> <= Retour aux dossiers</a>
+
+<p id ="content-holder">Ce texte sera copié dans le presse-papier.<p>
+    <button id="copy-button">Copie dans le presse-papier</button>
+    <textarea placeholder="Coller ici"></textarea>
+
+    <p id="p2">
+//// LES DIVERS ///// <br>
+<br>
+<br>
+/// Copier un élément dans le presse-papier ///<br>
+var bouton1 = document.getElementById("copy-button");<br>
+var contentHolder = document.getElementById("content-holder");<br>
+ bouton1.addEventListener("click", function() {<br>
+  var range = document.createRange();  <br>
+  range.selectNode(contentHolder);  <br>
+  window.getSelection().addRange(range);<br>
+  document.execCommand('copy'); <br>
+}, false);<br>
+<br>
+<br>
+/// Ajouter un fichier CSS ///<br>
+<br>
+document.getElementById("p2").style.color = "blue";<br>
+    </p>
+    <script src="LesDivers.js"></script>
+</body>
+</html>
