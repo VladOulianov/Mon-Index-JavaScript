@@ -18,7 +18,7 @@ const maFonction = function(a,b){
     return a+b;
    }
    maFonction(5,3); //8
-
+   console.log(maFonction(5,3));
    //Une fonction anonyme peut être utilisée comme argument dans une fonction
    setTimeout(function(){
    console.log("Message effacé");
